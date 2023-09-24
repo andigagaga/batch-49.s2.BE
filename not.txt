@@ -1,0 +1,6 @@
+app.post("/todos", (req: Request, res: Response): Response => {
+    const data: ITodos = req.body
+    Todos.push(data);
+
+    return res.status(200).json({ data: Todos})
+})
